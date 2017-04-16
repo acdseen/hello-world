@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>雪莉婚礼策划</title>
+    <script src="../js/jquery-2.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/animate.min.css"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="shortcut icon" href="../images/icon1.ico" type="image/x-icon">
+    <style>
+        .head{
+            background: rgba(128, 128, 128, 0.60);
+            width:60%;
+            height: 2px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        .text{
+            color: gray;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .img div{
+            padding: 77px;
+            text-indent: -9999px;
+            transition: 2s;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        .logo {
+            padding:0;
+        }
+        .logo img{
+            margin-top: -20px;
+            width: 240px;
+        }
+        #navbar{
+            padding-top: 20px;
+            margin-bottom: 0;
+        }
+        #main-nav a{
+            font-weight: bold;
+            border-radius: 10px;
+        }
+        .navbar-header{
+            height: 60px;
+        }
+        #main-nav ul li{
+            text-align: center;
+        }
+        @media (min-width: 768px) {
+            #main-nav>ul>li{
+                width: 100px;
+                font-size: 12px;
+            }
+        }
+        @media (min-width: 992px) {
+            #main-nav>ul>li{
+                width: 130px;
+                font-size: 15px;
+            }
+        }
+        @media (min-width: 1200px) {
+            #main-nav>ul>li{
+                width: 160px;
+                font-size: 18px;
+            }
+        }
+        .foot{
+            padding: 30px;
+            width: 100%;
+            background: #e7e7e7;
+            color: #AC8A48;
+            line-height: 22px;
+        }
+        .foot_logo img{
+            height: 60px;
+        }
+        .ce:hover{
+            opacity: 0.9;
+        }
+        .hand{
+            overflow: hidden;
+        }
+        .yon{
+            width: 92%;
+            background-color: rgba(0,0,0,.3);
+            position: absolute;
+            top: 0;
+        }
+        .hand:hover .yon{
+            height: 85%;
+        }
+        #top{
+            width: 30px;
+            height: 30px;
+            background: black;
+            position: fixed;
+            right: 0;
+            top: 50%;
+            display: none;
+            font-weight: bold;
+        }
+        .han_1{
+            font-size: 20px;
+            color: #666666;
+            font-family: '微软雅黑';
+            margin-bottom: 32px;
+        }
+        .han_2{
+            margin-top: 42px;
+            font-size: 20px;
+            color: #666666;
+        }
+        @media (max-width: 1200px){
+            .han_1{
+                font-size: 15px;
+                color: #666666;
+                font-family: '微软雅黑';
+            }
+            .han_2{
+                margin-top: 25px;
+                font-size: 15px;
+                color: #666666;
+            }
+        }
+        @media (max-width: 1000px){
+            .han_1{
+                font-size: 10px;
+                color: #666666;
+                font-family: '微软雅黑';
+            }
+            .han_2{
+                margin-top: 8px;
+                font-size: 10px;
+                color: #666666;
+                margin-bottom: 0;
+            }
+            #han button{
+                font-size: 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- header -->
+<header>
+    <nav class="navbar navbar-default" id="navbar">
+        <div class="container" id="myNav">
+            <div class="navbar-header">
+                <a href="../index.html" class="navbar-brand logo"><img src="../images/logo.png" alt="雪莉婚纱摄影网"/></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="../index.html" target="_blank">首页</a></li>
+                    <li class="dropdown">
+                        <a href="###" class="dropdown-toggle" data-toggle="dropdown">作品欣赏<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../interior.html" target="_blank">内景</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../interio.html" target="_blank">外景</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../tripshoot.html" target="_blank">全球旅拍</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../intei.html" target="_blank">艺术写真</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="###" class="dropdown-toggle" data-toggle="dropdown">婚礼现场<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../european.html" target="_blank">绚丽舞台</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../sinicism.html" target="_blank">传统国风</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../sum.html" target="_blank">欧美风</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="###" class="dropdown-toggle" data-toggle="dropdown">推荐套装<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../html/favourable.html" target="_blank">最新活动</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../html/Preferential.html" target="_blank">套装案例</a></li>
+                            <li class="divider"></li>
+                            <li><a href="../html/wedding%20suit.html" target="_blank">优惠活动</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact.html" target="_blank">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- header end -->
+<!--轮播-->
+<div class="container">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="text-align:center">
+            <div class="item active">
+                <a href="###"><img alt="First slide" src="../images/banner01.jpg"></a>
+            </div>
+            <div class="item">
+                <a href="###"><img alt="First slide" src="../images/banner02.jpg"></a>
+            </div>
+            <div class="item">
+                <a href="###"><img alt="First slide" src="../images/banner03.jpg"></a>
+            </div>
+            <div class="item">
+                <a href="###"><img alt="First slide" src="../images/banner04.jpg"></a>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+</div>
+<!--轮播 结束-->
+<!--回到顶部-->
+<a href="#navbar" id="top" style="">TOP</a>
+<!--内容-100分婚礼-->
+<div class="container-fluid" style="margin-bottom: 20px">
+    <div class="dowebok">
+        <div class="row" id="header">
+            <div class="container head"></div>
+            <div class="container wow rollIn text text-center">关于你的100分婚礼</div>
+            <div class="container wow lightSpeedIn text-center" style="font-size: 16px;color: gray">ABOUT YOU WEDDING</div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+<div class="container dowebok" id="han">
+</div>
+</div>
+<!--内容 100分婚礼-结束-->
+<!--内容-经典案列-->
+<div class="container-fluid" style="margin-bottom: 20px">
+    <div class="container head"></div>
+    <div class="container text text-center">精彩策划案列</div>
+    <div class="container text-center" style="font-size: 16px;color: gray">CASE</div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 xian">
+                <div class="thumbnail" style="transition:2s;opacity: 0.5">
+                    <a href="###"><img src="../images/102.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-6 yin">
+                <div class="thumbnail" style="transition:2s;opacity: 0.5">
+                    <a href="###"><img src="../images/100.jpg"/></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="dowebok">
+        <div class="row">
+            <div class="col-md-3 wow bounceInLeft">
+                <div class="thumbnail img pp">
+                    <a href="###"><img src="../images/052.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-3 wow bounceInDown">
+                <div class="thumbnail img pp1">
+                    <a href="###"><img src="../images/pp.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-3 wow bounceInUp">
+                <div class="thumbnail img pp2">
+                    <a href="###"><img src="../images/pp1.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-3 wow bounceInRight">
+                <div class="thumbnail img pp3">
+                    <a href="###"><img src="../images/pp2.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-3 wow bounceInLeft">
+                <div class="thumbnail img huo" style="transition: 2s">
+                    <a href="###"><img src="../images/huo.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-3 wow bounceInUp">
+                <div class="thumbnail img huo1">
+                    <a href="###"><img src="../images/huo1.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-3 wow bounceInDown">
+                <div class="thumbnail img huo2">
+                    <a href="###"><img src="../images/huo2.jpg"/></a>
+                </div>
+            </div>
+            <div class="col-md-3 wow bounceInRight">
+                <div class="thumbnail img huo3">
+                    <a href="###"><img src="../images/huo3.jpg"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!--内容 经典案例-结束-->
+<!--内容-灵感创意-->
+<div class="container-fluid" style="margin-bottom: 20px">
+    <div class="container" style="background: url('../images/INSPIRATIONS-bk.jpg') no-repeat 100%">
+        <h2 class="text-center">灵感创意</h2>
+        <div class="text-center" style="font-size: 16px;color: gray;margin-bottom: 20px">INSPIRATIONS</div>
+        <div class="row" style="margin-bottom: 40px">
+            <div class="col-lg-6">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <div class="thumbnail text-center ce">
+                        <a href="###"><img src="../images/linb.jpg"/></a>
+                        <a href="###">策划师独有风格</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="col-lg-6">
+                    <div class="thumbnail text-center ce">
+                        <a href="###"><img src="../images/lin.jpg"/></a>
+                        <a href="###">独具一心的婚礼场地</a>
+                    </div>
+                </div>
+                <div class="col-lg-6"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--内容 灵感创意-结束-->
+<!--内容-最新活动-->
+<div class="container-fluid" style="margin-bottom: 20px">
+    <div class="container head"></div>
+    <div class="container text text-center">最新活动</div>
+    <div class="container text-center" style="font-size: 16px;color: gray">ACTIVITY</div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="dowebok">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <a href="###">
+                    <img src="../images/guang6.jpg"/>
+                    <h4>雪莉婚庆，现在订购策划套餐</h4>
+                    <p>策划师们独一无二的策划方案</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <a href="##">
+                    <img src="../images/guang2.jpg"/>
+                    <h4>婚纱套装享八折扣价</h4>
+                    <p>各色各样的婚纱套装打扮出最靓丽的你</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <a href="###">
+                    <img src="../images/guang.jpg"/>
+                    <h4>七夕超级钜惠</h4>
+                    <p>各种结婚场地任你选，享九折优惠</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center"><button class="btn btn-info">更多活动>></button></div>
+        </div>
+        </div>
+</div>
+<!--内容 最新活动-结束-->
+<!--内容-其他-->
+<div class="container-fluid" style="margin-bottom: 20px">
+    <div class="container head"></div>
+    <div class="container text text-center">其他</div>
+    <div class="container text-center" style="font-size: 16px;color: gray">OTHER</div>
+</div>
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1 col-md-1"></div>
+            <div class="col-lg-5 wow bounceInLeft hand col-md-5">
+                <div class="thumbnail">
+                    <a href="###"><img src="../images/others01.jpg"/></a>
+                    <a class="yon" href="###"></a>
+            </div>
+            </div>
+            <div class="col-lg-5 wow bounceInRight hand col-md-5">
+                <div class="thumbnail">
+                    <a href="###"><img src="../images/foot.jpg"/></a>
+                    <a class="yon" href="###"></a>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 col-md-1"></div>
+            <div class="col-lg-5 wow bounce hand col-md-5">
+                <div class="thumbnail">
+                    <a href="###" style="overflow: hidden">
+                        <img src="../images/foot1.jpg"/>
+                        <a class="yon" href="###"></a>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 wow swing hand col-md-5">
+                <div class="thumbnail">
+                    <a href="###"><img src="../images/font2.jpg"/></a>
+                    <a class="yon" href="###"></a>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1"></div>
+        </div>
+    </div>
+</div>
+<!--内容-其他 结束-->
+<!--脚部-->
+<div class="foot">
+    <div class="foot_main container">
+        <div class="row">
+            <div class="foot_logo col-sm-4"><img src="../images/logo.png" class="img-responsive"></div>
+            <div class="address col-sm-8">咨询电话：028-24842512/4006-024-688     地址：四川省成都市武侯区龙井西街92号 <br>@CopyRight 成都雪莉婚纱摄影有限公司 All Rights Resrved  川ICP备12013399号 <br>技术支持：柯然科技 <a href="###" title="站长统计">站长统计</a></div>
+        </div>
+    </div>
+</div>
+<!--jquery 效果代码-->
+<script>
+    $(function(){
+        new WOW().init();
+        <!--渐显渐隐-->
+        $('.xian').mouseover(function(){
+            $('.xian>div').css('opacity','1')
+        });
+        $('.xian').mouseout(function(){
+            $('.xian>div').css('opacity','0.5')
+        });
+        $('.yin').mouseover(function(){
+            $('.yin>div').css('opacity','1')
+        });
+        $('.yin').mouseout(function(){
+            $('.yin>div').css('opacity','0.5')
+        });
+        /*图片更换*/
+        $('.pp').mouseover(function(){
+            $('.pp img').attr("src","../images/QQ20161107113010.jpg");
+        });
+        $('.pp').mouseout(function(){
+            $('.pp img').attr("src","../images/052.jpg");
+        });
+        $('.pp1').mouseover(function(){
+            $('.pp1 img').attr("src","../images/pp-big.jpg");
+        });
+        $('.pp1').mouseout(function(){
+            $('.pp1 img').attr("src","../images/pp.jpg");
+        });
+        $('.pp2').mouseover(function(){
+            $('.pp2 img').attr("src","../images/pp1-big.jpg");
+        });
+        $('.pp2').mouseout(function(){
+            $('.pp2 img').attr("src","../images/pp1.jpg");
+        });
+        $('.pp3').mouseover(function(){
+            $('.pp3 img').attr("src","../images/pp2-big.jpg");
+        });
+        $('.pp3').mouseout(function(){
+            $('.pp3 img').attr("src","../images/pp2.jpg");
+        });
+        $('.huo').mouseover(function(){
+            $('.huo img').attr("src","../images/huo-big.jpg");
+        });
+        $('.huo').mouseout(function(){
+            $('.huo img').attr("src","../images/huo.jpg");
+        });
+        $('.huo1').mouseover(function(){
+            $('.huo1 img').attr("src","../images/huo-big1.jpg");
+        });
+        $('.huo1').mouseout(function(){
+            $('.huo1 img').attr("src","../images/huo1.jpg");
+        });
+        $('.huo2').mouseover(function(){
+            $('.huo2 img').attr("src","../images/huo-big2.jpg");
+        });
+        $('.huo2').mouseout(function(){
+            $('.huo2 img').attr("src","../images/huo2.jpg");
+        });
+        $('.huo3').mouseover(function(){
+            $('.huo3 img').attr("src","../images/huo-big3.jpg");
+        });
+        $('.huo3').mouseout(function(){
+            $('.huo3 img').attr("src","../images/huo3.jpg");
+        });
+        $.ajax({
+            url:"../php/22.php",//访问PHP页面的URL
+            type:"post",
+            //data:{},//传参数
+            dataType:'json',//将数据转换成object
+            success:function(data){
+                $('#han').html('');
+                for(var i= 0;i<data.length;i++){
+                    $('#han').append('<div class="row" ><div class="col-lg-4 wow rollIn col-md-4 col-sm-4"><div class="thumbnail"><a href="###"><img src="'+data[i].src+'"/></a></div></div>' +
+                    '<div class="col-lg-8 wow bounceInRight col-md-8 col-sm-8"><div class="thumbnail">'+
+                    '<p class="han_2">'+data[i].page+'</p>'+
+                    '<p class="han_1">'+data[i].title+'</p>'+
+                    '<button class="btn btn-info"> 详细 </button></div></div></div>')
+                }
+            }
+        });
+        var TOP=document.getElementById('top');
+        /*滚动触发*/
+        window.onmousewheel=function(event){
+            var a=window.event||event;
+            if(document.body.scrollTop>=250){
+                TOP.style.display='block';
+            }else{
+                TOP.style.display='none';
+            }
+        }
+    })
+</script>
+</body>
+</html>

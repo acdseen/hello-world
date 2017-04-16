@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="images/icon1.ico" type="image/x-icon">
+    <title>欧美风来袭</title>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/sum.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid FullScreen" style="overflow: hidden">
+      <!--头部-->
+      <div class="container">
+          <p class="col-lg-12 col-xs-12 col-sm-12 col-md-12 text-center txt1" style="color:white;">雪莉婚纱摄影</p>
+          <p class="col-lg-12 col-xs-12 col-sm-12 col-md-12 text-center txt2" style="color:white;">全球首发</p>
+      </div>
+      <!--内容图片-->
+      <div class="container">
+          <div class="row">
+              <!--table选项卡效果-->
+              <div class="col-lg-6 col-md-6  col-sm-6 col-xs-12">
+                  <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 clicktxt text-center">
+                      <ul class="cllo">
+                          <li class="textbackcolor">绚丽</li>
+                          <li>优雅</li>
+                          <li>浪漫</li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-xs-3"></div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-9" style="position:relative">
+                  <!--绚丽的图片部分-->
+                  <div class="borimg" style="position: absolute;display: block;" id="imga">
+                      <div class="po0 wow bounceInUp"><a href="#" class="imgbox1"></a></div><!--最上面的一张图片-->
+                      <div class="po1"><a href="european.html"><p style="color:white;border:5px solid #ffab2d;overflow: hidden;display: block" class="img-circle imgwidth text-center wenzi">GORGEOUS</p></a></div><!--中间文字部分-->
+                      <div class="po2 wow bounceInDown"><a href="#" class="imgbox1"></a></div><!--左上的一张图片-->
+                      <div class="po3 wow bounceInUp"><a href="#" class="imgbox1"></a></div><!--右下的一张图片-->
+                      <div class="po4 wow bounceInDown"><a href="#" class="imgbox1"></a></div><!--右上的一张图片-->
+                      <div class="po5 wow bounceInDown"><a href="#" class="imgbox1"></a></div><!--右下的一张图片-->
+                      <div class="po6 wow bounceInUp"><a href="#" class="imgbox1"></a></div><!--最下面的一张图片-->
+                  </div>
+                  <!--优雅的图片部分-->
+                <div class="borimg" style="position: absolute;display: none">
+                      <div class="po0 wow bounceInLeft"><a href="#"  class="imgbox1 wow slideInLeft"></a></div><!--最上面的一张图片-->
+                      <div class="po1"><a href="#"><p style="color:white;border:5px solid #ffab2d;overflow: hidden;" class="img-circle imgwidth text-center wenzi">GRACE</p></a></div><!--中间文字部分-->
+                      <div class="po2 wow slideInRight"><a href="#" class="imgbox1"></a></div><!--左上的一张图片-->
+                      <div class="po3 wow bounceInLeft"><a href="#" class="imgbox1"></a></div><!--右下的一张图片-->
+                      <div class="po4 wow slideInRight"><a href="#" class="imgbox1"></a></div><!--右上的一张图片-->
+                      <div class="po5 wow slideInRight"><a href="#" class="imgbox1"></a></div><!--右下的一张图片-->
+                      <div class="po6 wow bounceInLeft"><a href="#" class="imgbox1"></a></div><!--最下面的一张图片-->
+                  </div>
+
+                  <div class="borimg" style="position: absolute;display: none">
+                      <div class="po0 wow bounceInUp"><a href="#" class="imgbox1"></a></div><!--最上面的一张图片-->
+                      <div class="po1"><a href="#"><p style="color:white;border:5px solid #ffab2d;overflow:hidden;" class="img-circle imgwidth text-center wenzi">ROMANTIC</p></a></div><!--中间文字部分-->
+                      <div class="po2 wow bounceInLeft"><a href="#" class="imgbox1"></a></div><!--左上的一张图片-->
+                      <div class="po3 wow slideInRight"><a href="#" class="imgbox1"></a></div><!--右下的一张图片-->
+                      <div class="po4 wow bounceInDown"><a href="#" class="imgbox1"></a></div><!--右上的一张图片-->
+                      <div class="po5 wow slideInRight"><a href="#" class="imgbox1"></a></div><!--右下的一张图片-->
+                      <div class="po6 wow bounceInLeft"><a href="#" class="imgbox1"></a></div><!--最下面的一张图片-->
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+<script>
+
+
+    $(function(){
+
+        var wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 0,
+            mobile: true,
+            live: true
+        });
+        wow.init();
+
+        $.ajax({
+            url:"php/imgpho.php",//引入php路径
+            type:"POST",
+            dataType:"json",
+            success:function(data){
+                for(var i=0; 1<data.length;i++){
+                    $(".imgbox1").eq(i).html("<img src='images/"+data[i].imgsrc+"' class='img-circle imgwidth'>");//给每个a标签里面动态添加img图片
+                }
+            }
+        });
+
+
+        $(".clicktxt>ul>li").click(function(){
+            var thisindex=$(this).index();//获取点击的自己的下标
+            $(this).addClass("textbackcolor").siblings().removeClass("textbackcolor");//点击自身添加样式，同级的移除样式
+            $(".borimg").eq(thisindex).fadeIn(1000).siblings().hide();//点击后同下标的显示，同级的隐藏
+        });
+        $(".borimg>div").mouseover(function(){
+            $(this).find("a>img").addClass("tran");
+            $(this).find("a>img").css("opacity","1")
+        }).mouseout(function(){
+            $(this).find("a>img").removeClass("tran");
+            $(this).find("a>img").css("opacity","0.5")
+        })
+    })
+</script>
+</body>
+</html>

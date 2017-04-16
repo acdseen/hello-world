@@ -1,0 +1,134 @@
+.FullScreen{
+    background-color:deeppink;
+    width:100%;
+    height:100%;
+    position: absolute;
+    border:10px solid orange;
+}
+
+.textbackcolor{
+    background-color: #f21fff;
+
+}
+.tran{
+    transform: scale(1.5,1.5) rotate(360deg);
+    transition: 1s;
+    box-shadow: 0 0 30px gray;
+}
+.borimg>div>a>img{
+    opacity: 0.5;
+}
+@media (min-width:1200px) {
+    .txt1{
+       font-size: 30px;
+    }
+    .txt2{
+        font-size: 20px;
+    }
+    .clicktxt>ul>li{
+        list-style: none;
+        border:1px solid gray;
+        color:white;
+        cursor: pointer;
+        font-size: 35px;
+    }
+    .imgwidth{
+        width:160px;
+        height:160px;
+        line-height:160px;
+    }
+    .po1{
+        position:absolute;
+        top:200px;
+    }
+    .po2{
+    position:absolute;
+        left:-220px;
+        top:110px;
+    }
+    .po3{
+        position:absolute;
+        left:-220px;
+        top:350px;
+    }
+    .po4{
+        position:absolute;
+        top:420px;
+    }
+    .po5{
+        position:absolute;
+        left:220px;
+        top:110px;
+    }
+    .po6{
+        position:absolute;
+        left:220px;
+        top:330px;
+    }
+    .wenzi{
+        font-size:25px;
+    }
+}
+
+
+
+@media (max-width:1200px) {
+    .cllo>li{
+        float:left;
+    }
+    .txt1{
+        font-size: 20px;
+    }
+    .txt2{
+        font-size: 10px;
+    }
+    .clicktxt>ul>li{
+        list-style: none;
+        width:50px;
+        border:1px solid gray;
+        color:white;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .imgwidth{
+        width:60px;
+        height:60px;
+        line-height:60px;
+    }
+    .po0{
+        position:absolute;
+        top:90px;
+    }
+    .po1{
+        position:absolute;
+        top:200px;
+    }
+    .po2{
+        position:absolute;
+        left:-90px;
+        top:140px;
+    }
+    .po3{
+        position:absolute;
+        left:-90px;
+        top:250px;
+    }
+    .po4{
+        position:absolute;
+        top:310px;
+    }
+    .po5{
+        position:absolute;
+        left:100px;
+        top:140px;
+    }
+    .po6{
+        position:absolute;
+        left:100px;
+        top:250px;
+    }
+    .wenzi{
+        font-size:10px;
+    }
+}
+
